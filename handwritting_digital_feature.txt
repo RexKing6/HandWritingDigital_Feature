@@ -1,0 +1,35 @@
+Database:
+1. MNIST
+Class Number: 10
+Sample number: Training set( 60000), Test set (10000)
+image size: 28 x 28
+
+2. USPS
+Class number: 10
+Sample number: Training set (7291), Test set (2007)
+image size: 16 x 16
+
+3. SVHN
+Class number: 10
+Sample number: Training set (73257)  valid set ( 26032) test (531131)
+
+
+Task:
+1. VGG16 feature maps
+(1)To fine-tune the vgg16 with 60000 training samples from MNIST, then
+extract the convolutional activations from the CONV5_3 layer of
+vgg16 for  all the 60000+10000 MNIST samples, all the 7291+2007 USPS
+samples, and the 73257 + 26032 SVHN samples.
+(2) The feaures with their labels are saved as *.mat files.
+
+
+2. ResNet feature maps
+(1) To fine-tune the ResNet (the number of layers is determined by
+you) with 60000 training samples from MNIST, then extract the
+convolutional activations from the conv5_x layer of the netowrk for all the 60000+10000 MNIST samples, all the  7291+2007 USPS samples, and the 73257 + 26032 SVHN samples.
+(2) The feaures with their labels are saved as *.mat files.
+
+
+I will appreciate that the feature of MNIST and USPS dataset can be
+obtained before 11/8/2018. The other features are obtained before
+11/10/2018. 
